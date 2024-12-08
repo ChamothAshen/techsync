@@ -1,0 +1,569 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Our Services
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0.9;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="font-jetbrains-mono bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+               TechSync - Our Services
+            </h1>
+            
+        </div>
+    </header>
+    <main class="container mx-auto p-4 ">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal1')">
+                <img alt="A detailed illustration of an inventory management system with various stock items and a tracking interface"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/owpF4WJwwWLDI92FT75iNz4MDzPeBk4hXf5Hr1ZWgFKSifwnA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Inventory Management Systems
+                </h2>
+                <p class="mt-2">
+                    Inventory tracking and management with automated systems designed to handle stock levels,
+                    reordering, and reporting.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal2')">
+                <img alt="A financial dashboard showing sales, expenses, and budget planning tools"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/MxKCQh1sF9L9PlLRKTnOvSbSlzDSrlMrkJNTWJstBf5BxP8JA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Finance and Sales Management Systems
+                </h2>
+                <p class="mt-2">
+                    Keep finances in check with custom tools for invoicing, sales tracking, financial reporting, and
+                    budget planning.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal3')">
+                <img alt="An HR management interface with employee profiles, performance tracking, and leave management"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/6cDbVPJpcFrHBdOnci9cxGYVjBnD1jvUyVoxXTnKnvoh4HeJA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    HR Management Systems
+                </h2>
+                <p class="mt-2">
+                    Systems that simplify employee onboarding, performance tracking, leave management, and compliance
+                    reporting.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal4')">
+                <img alt="A school management system interface showing student registration, grades, and attendance tracking"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/37I4ZGjqDYqXL54DB3qYFVGVHn86Lav0a2FqskPTEuTk4HeJA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    School Management Systems
+                </h2>
+                <p class="mt-2">
+                    Solutions for student registration, grade management, attendance tracking, timetable creation, and
+                    communication portals for parents and staff.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal5')">
+                <img alt="A legal practice management system with case management, client records, and document storage"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/Q9sCERLA4f3mSiXoVnfq6PAXhnijICwXd7Hn8IrZNSnIifwnA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Legal Practice Management Systems
+                </h2>
+                <p class="mt-2">
+                    Simplify case management, client records, document storage, and billing.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal6')">
+                <img alt="An attendance and payroll system interface showing employee attendance and payroll processing"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/6FJRzMes3qW0HqjaC7n5M4B6LhBZDKv54OsyIj51YXUCxP8JA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Attendance and Payroll Systems
+                </h2>
+                <p class="mt-2">
+                    Track employee attendance and automate payroll processes, including tax calculations, overtime, and
+                    leave deductions.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal7')">
+                <img alt="A professionally designed website showcasing a portfolio, company profile, and product showcase"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/JFe6dfywsqi4jkhMtzR6IrZjEboEmgqoi6RMHvQUhT66hfwnA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Professionally Designed Websites
+                </h2>
+                <p class="mt-2">
+                    We build visually appealing, user-friendly websites.
+                </p>
+                <ul class="list-disc list-inside mt-2">
+                    <li>
+                        Portfolio Websites
+                    </li>
+                    <li>
+                        Company Profiles
+                    </li>
+                    <li>
+                        Product Showcase Sites
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal8')">
+                <img alt="An online store interface with product listings and integrated payment gateway"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/ajVTOR5CdErzDtfmJjjhuMhfzGKQabA1f0wTBfdnRgMrIeDfE.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Online Stores with Payment Gateway Integration
+                </h2>
+                <p class="mt-2">
+                    Develop secure and scalable e-commerce platforms with integrated payment gateways and customer
+                    management features.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal9')">
+                <img alt="An inventory and warehouse management system showing stock levels and shipment tracking"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/ysFuxX6jLtaBLNIxfhIZtDlynQ2mTGh9glKfTeHkhkU2DfhPB.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Inventory and Warehouse Management Systems
+                </h2>
+                <p class="mt-2">
+                    Enhance operational efficiency with tools to manage stock, track shipments, optimize storage, and
+                    generate real-time analytics for better decision-making.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal10')">
+                <img alt="A healthcare management system interface showing appointment scheduling and medical records"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/ful92pbJDi1ne0DT41eGsA4XvZsQ8sieHPAmRfyxstVqP8DfE.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Healthcare Management Systems
+                </h2>
+                <p class="mt-2">
+                    Enhance patient care with solutions for appointment scheduling, medical records management, billing,
+                    and reporting.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal11')">
+                <img alt="An appointment scheduling system with calendar integrations and automated reminders"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/viIyDBYo6fyaSaJUszbsYD5Abpze90qRgmF4fIMFpjzEEfhPB.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Appointment Scheduling Systems
+                </h2>
+                <p class="mt-2">
+                    Efficiently manage bookings with features like calendar integrations, automated reminders, and
+                    online scheduling portals.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal12')">
+                <img alt="An event management system showing ticketing, attendee registration, and venue management"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/MwMX3e7vDIzrDybTYJzrBuMeRYlBhbgrVQ0iIWWZZhqeDfhPB.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Event Management Systems
+                </h2>
+                <p class="mt-2">
+                    Comprehensive event solutions for ticketing, attendee registration, venue management, and
+                    scheduling, ensuring smooth event planning and execution.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal13')">
+                <img alt="A project and task management system with task assignment and progress tracking"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/ADTVf9ER8KR7WKcuf8eRq1eJ0JPP5XvxOm4DywHelBqFQ8DfE.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Project and Task Management Systems
+                </h2>
+                <p class="mt-2">
+                    Software for task assignment, progress tracking, deadline management, and collaborative team tools.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal14')">
+                <img alt="A membership management system showing member registration and subscription billing"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/jyzllmziDewxQy4kQueXqth2bjOits8fhbKCiXIXkXSbEfhPB.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Membership Management Systems
+                </h2>
+                <p class="mt-2">
+                    Manage registration, subscription billing, member engagement tracking, and data analytics.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal15')">
+                <img alt="A food delivery and restaurant system showing online food ordering and delivery tracking"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/uWhZfFd6XQRcWa3WISS6u8C8tfnvR6X8fhCOqdXlQR4fIeDfE.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Food Delivery and Restaurant Systems
+                </h2>
+                <p class="mt-2">
+                    Enhance your restaurant’s digital presence with online food ordering, delivery tracking, menu
+                    management, and customer feedback.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg card cursor-pointer" onclick="openModal('modal16')">
+                <img alt="A Moodle development interface for schools, universities, and corporate training"
+                    class="w-full h-40 object-cover rounded-t-lg" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/9Gc3hqfJKNW4CaW8jpX0XQWtBKzlFsrbxfTDUwT9TlhMifwnA.jpg"
+                    width="600" />
+                <h2 class="text-xl font-bold mt-4">
+                    Moodle Development
+                </h2>
+                <p class="mt-2">
+                    Ideal for schools, universities, and corporate training.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
+                <h2 class="text-2xl font-bold mb-4">
+                    Contact Us
+                </h2>
+                <p class="mb-2">
+                    <strong>Company Name:</strong> TechSync
+                </p>
+                <p class="mb-2">
+                    <strong>Mobile Numbers:</strong> 0702079911 || 0765495409
+                </p>
+                <p class="mb-2">
+                    <strong>Email:</strong> chamothashen123@gmail.com, kavinda373@gmail.com
+                </p>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="bg-blue-600 text-white p-4 mt-6">
+        <div class="container mx-auto text-center">
+            <p>
+                © 2023 TechSync. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Inventory Management Systems
+            </h2>
+            <p class="mt-4">
+                Inventory tracking and management with automated systems designed to handle stock levels, reordering,
+                and reporting.
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Finance and Sales Management Systems
+            </h2>
+            <p class="mt-4">
+                Keep finances in check with custom tools for invoicing, sales tracking, financial reporting, and budget
+                planning.
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                HR Management Systems
+            </h2>
+            <p class="mt-4">
+                Systems that simplify employee onboarding, performance tracking, leave management, and compliance
+                reporting.
+            </p>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                School Management Systems
+            </h2>
+            <p class="mt-4">
+                Solutions for student registration, grade management, attendance tracking, timetable creation, and
+                communication portals for parents and staff.
+            </p>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Legal Practice Management Systems
+            </h2>
+            <p class="mt-4">
+                Simplify case management, client records, document storage, and billing. Improve legal practice
+                efficiency with streamlined workflows and secure document handling.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Attendance and Payroll Systems
+            </h2>
+            <p class="mt-4">
+                Track employee attendance and automate payroll processes, including tax calculations, overtime, and
+                leave deductions. Ensure compliance with local labor laws.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Professionally Designed Websites
+            </h2>
+            <p class="mt-4">
+                Create visually appealing and user-friendly websites tailored to your needs. Options include portfolio
+                websites, company profiles, and product showcase sites.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Online Stores with Payment Gateway Integration
+            </h2>
+            <p class="mt-4">
+                Develop secure and scalable e-commerce platforms with integrated payment gateways, customer management
+                features, and customizable designs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Inventory and Warehouse Management Systems
+            </h2>
+            <p class="mt-4">
+                Enhance operational efficiency with tools to manage stock, track shipments, optimize storage, and
+                generate real-time analytics for better decision-making.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 10 -->
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Healthcare Management Systems
+            </h2>
+            <p class="mt-4">
+                Enhance patient care with solutions for appointment scheduling, medical records management, billing, and
+                reporting. Ensure data security and compliance.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 11 -->
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Appointment Scheduling Systems
+            </h2>
+            <p class="mt-4">
+                Efficiently manage bookings with features like calendar integrations, automated reminders, and online
+                scheduling portals. Improve customer convenience and satisfaction.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 12 -->
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal12')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Event Management Systems
+            </h2>
+            <p class="mt-4">
+                Comprehensive event solutions for ticketing, attendee registration, venue management, and scheduling,
+                ensuring smooth event planning and execution.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 13 -->
+    <div class="modal" id="modal13">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal13')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Project and Task Management Systems
+            </h2>
+            <p class="mt-4">
+                Streamline team collaboration with software for task assignment, progress tracking, deadline management,
+                and real-time updates on projects.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 14 -->
+    <div class="modal" id="modal14">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal14')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Membership Management Systems
+            </h2>
+            <p class="mt-4">
+                Manage member registration, subscription billing, and engagement tracking. Use data analytics to enhance
+                member retention and satisfaction.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 15 -->
+    <div class="modal" id="modal15">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal15')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Food Delivery and Restaurant Systems
+            </h2>
+            <p class="mt-4">
+                Enhance your restaurant’s digital presence with online food ordering, delivery tracking, menu
+                management, and customer feedback systems.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal 16 -->
+    <div class="modal" id="modal16">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal16')">
+                &times;
+            </span>
+            <h2 class="text-2xl font-bold">
+                Moodle Development
+            </h2>
+            <p class="mt-4">
+                Ideal for schools, universities, and corporate training. Create custom LMS platforms tailored to your
+                educational or training needs.
+            </p>
+        </div>
+    </div>
+<script>
+    function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+</script>
+    </body>
+</html>
